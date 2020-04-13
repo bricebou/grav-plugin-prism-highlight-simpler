@@ -1,15 +1,15 @@
 # Grav Prism Highlighter Simpler Plugin
 
-`Prism Highlighter` is a [Grav](http://github.com/getgrav/grav) plugin that adds simple and powerful code highlighting functionality utilizing the [Prism.js](http://prismjs.com/) syntax highlighter.
+`Prism Highlighter Simpler` is a [Grav](http://github.com/getgrav/grav) plugin that adds simple and powerful code highlighting functionality utilizing the [Prism.js](http://prismjs.com/) syntax highlighter.
 
 It is mainly based on the [Prism Highlighter plugin by Trilby Media](https://github.com/trilbymedia/grav-plugin-prism-highlight).
 
 But it doesn't need you to use shortcodes to include your code samples! You just have to use the usual Markdown syntax:
 
 ```
-\`\`\`bash
+```bash
 $ echo $USER
-\`\`\`
+```    
 ```
 
 # Installation
