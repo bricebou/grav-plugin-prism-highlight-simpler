@@ -1,14 +1,14 @@
-name: Prism Highlighter
+name: Prism Highlighter Simpler
 version: 1.0.2
-description: "This plugin provides code highlighting functionality via the [Prism.js](http://prismjs.com/) syntax highlighter with lots of themes and plugins."
+description: "This plugin provides code highlighting functionality via the [Prism.js](http://prismjs.com/) syntax highlighter with lots of themes and plugins.<br/>It's a modified of [the Prism Highlighter plugin by Trilby Media](https://github.com/trilbymedia/grav-plugin-prism-highlight).<br />It doesn't need shortcodes and is applied to all markdown `pre` tags (for example `\`\`\`php`)."
 icon: code
 author:
-    name: Trilby Media
-    email: hello@trilby.media
-    url: https://trilby.media
-homepage: https://github.com/trilbymedia/grav-prism-highlight
+    name: Brice Boucard
+    email: bricebou@momh.fr
+    url: https://momh.fr
+homepage: https://github.com/bricebou/grav-plugin-prism-highlight-simpler
 keywords: highlight, plugin, code, prism.js
-bugs: https://github.com/trilbymedia/grav-prism-highlight/issues
+bugs: https://github.com/bricebou/grav-plugin-prism-highlight-simpler/issues
 license: MIT
 
 form:
@@ -25,30 +25,19 @@ form:
       validate:
         type: bool
 
+    section_plugins:
+      type: section
+      title: Options
+      underline: true
+
     theme:
       type: select
       label: CSS Theme
       default: prism-base16-ocean.dark.css
       size: large
-      data-options@: '\Grav\Plugin\PrismHighlightPlugin::themeOptions'
+      data-options@: '\Grav\Plugin\PrismHighlightSimplerPlugin::themeOptions'
 
-    all-pre-blocks:
-      type: toggle
-      label: All Pre Blocks
-      highlight: 1
-      default: 1
-      options:
-        1: PLUGIN_ADMIN.ENABLED
-        0: PLUGIN_ADMIN.DISABLED
-      validate:
-        type: bool
-
-    section_plugins:
-      type: section
-      title: Plugins Options
-      underline: true
-
-    plugins.line-numbers:
+    line-numbers:
       type: toggle
       label: Line Numbers
       highlight: 0
@@ -59,9 +48,9 @@ form:
       validate:
         type: bool
 
-    plugins.command-line:
+    default-language-toggle:
       type: toggle
-      label: Command Line
+      label: Adding a default language?
       highlight: 0
       default: 0
       options:
@@ -69,11 +58,10 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
-
-    plugins.command-line-prompt:
+    
+    default-language-value:
       type: text
-      size: small
-      label: Command Line Prompt
-
-
+      size: x-small
+      label: Default language value
+      description: For example: txt, latex, php, css... 
 
