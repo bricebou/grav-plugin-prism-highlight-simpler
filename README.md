@@ -9,8 +9,8 @@ But it doesn't need you to use shortcodes to include your code samples! You just
 ```
 ```bash
 $ echo $USER
-```    
 ```
+
 
 # Installation
 
