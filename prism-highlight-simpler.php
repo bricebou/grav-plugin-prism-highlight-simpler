@@ -65,6 +65,7 @@ class PrismHighlightSimplerPlugin extends Plugin
         }
 
         if ($line_numbers) {
+            $inline .= "__prism_nodes = document.querySelectorAll('pre');\n";
             $inline .= $this->_addJsClass('line-numbers');
         }
 
