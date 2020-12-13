@@ -70,7 +70,11 @@ class PrismHighlightSimplerPlugin extends Plugin
         }
 
         if ($inline) {
-            $this->grav['assets']->addInlineJs($inline, null, 'bottom');
+            // $this->grav['assets']->addInlineJs($inline, null, 'bottom');
+
+            $file = __dir__ . '/js/prism-inline.js';
+            file_put_contents($file, $inline);
+            $this->grav['assets']->addJs('plugin://prism-highlight-simpler/js/prism-inline.js', null, true, null, 'bottom');
         }
     }
 
